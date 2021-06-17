@@ -13,21 +13,20 @@ unsigned long wait;
 
 
 void setup() {
-  Serial.begin(9600);
+	Serial.begin(9600);
 	Led.init();
 	wait = millis();
 }
 
 void loop() {
 	Led.start();
-  Serial.println(Led.getPercent());
-  Serial.println(Led.getStartTime());
-  Serial.println(Led.getStopTime());
+	Serial.println(Led.getPercent());
+	Serial.println(Led.getStartTime());
+	Serial.println(Led.getStopTime());
 	if(millis() - wait >= 10000) {
 		wait = millis();
 		Led.reset();
 	}
 }
-
 
 ```
