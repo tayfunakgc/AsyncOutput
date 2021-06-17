@@ -4,7 +4,9 @@ Non-blocking digital output library for arduino
 
 ## Example Usages
 
-```
+```cpp
+#include <AsyncOutput.h>
+
 AsyncOutput Led(LED_BUILTIN, 5, LOW);
 
 unsigned long wait;
